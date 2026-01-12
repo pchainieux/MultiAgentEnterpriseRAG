@@ -64,18 +64,18 @@ And visit `http://localhost:8000/`to use the built in ingestion + chat UI.
 
 ## API usage
 ### Ingesting 
-The UI expects container-local file paths to ingest them (for example: ./data/docs/document.txt)
+The UI expects container local file paths to ingest them (for example: .docs/document.txt)
 
 ```bash 
 curl -X POST http://localhost:8000/ingest \
   -H "Content-Type: application/json" \
   -d '{
-    "paths": ["./data/docs/document.pdf", "./data/docs/document.txt"]
+    "paths": [".docs/document.pdf", ".docs/document.txt"]
   }'
 ```
 
 ### Chatting
-Runs the LangGraph workflow using sessionid for multi-turn continuity and returns an answer plus structured citations.
+Runs the LangGraph workflow using sessionid for multi turn continuity and returns an answer plus structured citations.
 
 ```bash
 curl -X POST http://localhost:8000/chat \
