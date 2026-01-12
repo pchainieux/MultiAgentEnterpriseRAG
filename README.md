@@ -16,7 +16,12 @@ For deeper design details (agents, state, data flow, decisions), see `ARCHITECTU
 
 Prerequisits: Docker + Docker Compose.
 
-1) Create a `.env` file, copy it from the following template:
+1) Clone this repository on your machine: 
+```bash
+git clone https://github.com/pchainieux/MultiAgentEnterpriseRAG.git
+```
+
+2) Create a `.env` file, copy it from the following template:
 ```text
 # ---------- Core app ----------
 APP_ENV=local
@@ -46,7 +51,7 @@ LOG_LEVEL=INFO
 ```
 and set at least your own LLM API keys. 
 
-2) Start the stack:
+3) Start the stack:
 ```bash
 docker compose up --build
 ```
