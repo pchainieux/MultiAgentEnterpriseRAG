@@ -1,0 +1,86 @@
+ACME INDUSTRIAL SYSTEMS, INC.
+Quarterly Finance Report — Q3 FY2025 (Unaudited)
+Period: July 1, 2025 to September 30, 2025
+Reporting currency: EUR
+
+1) Executive summary
+Q3 FY2025 delivered continued top-line expansion and improved operating discipline, despite cost pressure in logistics and energy. Revenue grew year-over-year driven by higher unit volume in the Core Components segment and pricing actions implemented in late Q2. Gross margin improved sequentially as the manufacturing footprint optimization program reduced scrap and rework. Operating expenses increased modestly due to planned hiring in engineering and a higher spend on customer success initiatives.
+
+Management’s focus for Q4 is to (a) protect gross margin through procurement renegotiations and mix management, (b) improve working capital efficiency, and (c) de-risk the Q1 production ramp for the new “Atlas” product line.
+
+2) Income statement highlights
+Revenue
+- Q3 revenue: €48.6m (up 11.8% YoY; up 3.9% QoQ).
+- Core Components: €31.2m (up 15.6% YoY) supported by new OEM contracts and improved delivery performance.
+- Field Services: €12.1m (up 6.2% YoY) with stable attach rates and stronger renewals.
+- Software & Monitoring: €5.3m (up 8.7% YoY) led by incremental seats in the enterprise tier.
+
+Cost of goods sold and gross margin
+- Q3 gross profit: €20.2m.
+- Gross margin: 41.6% (up 90 bps QoQ; flat YoY).
+Key drivers:
+- Positive: lower overtime, better yield in Plant A, and favorable product mix.
+- Negative: inbound freight surcharges and elevated component spot buys for two critical parts.
+
+Operating expenses
+- R&D: €6.4m (13.2% of revenue), up €0.6m YoY from incremental headcount and prototype spend.
+- Sales & Marketing: €5.8m (11.9% of revenue), up €0.3m YoY due to channel enablement and events.
+- G&A: €3.7m (7.6% of revenue), up €0.2m YoY from IT security upgrades.
+
+Operating income and net income
+- Operating income (EBIT): €4.3m (8.9% margin), up from €3.1m in Q2.
+- Net income: €3.2m after €0.5m in interest and €0.6m tax expense.
+- Adjusted EBITDA: €6.1m (12.6% margin), reflecting €1.8m depreciation/amortization and €0.0m one-time items.
+
+3) Cash flow and liquidity
+Operating cash flow
+- Cash from operations: €5.4m, primarily driven by higher operating income and disciplined collections.
+Working capital
+- Accounts receivable: €18.9m; DSO improved to 35 days (from 39 days in Q2) after a targeted collections sprint.
+- Inventory: €14.7m; inventory days increased to 62 (from 57) as the team built buffer stock for Q4 demand and to mitigate supplier lead-time variability.
+- Accounts payable: €10.2m; DPO stable at 42 days.
+
+Investing and financing
+- Capex: €2.1m (tooling and test equipment for Atlas ramp; selective automation).
+- Debt: €0.8m net repayment on the revolving credit facility.
+- Ending cash balance: €12.6m with €7.0m undrawn availability on the revolver.
+
+Liquidity assessment
+Management believes the company has sufficient liquidity to execute the Q4–Q1 operating plan, including planned capex and seasonal working capital needs. Stress testing indicates the company remains within covenant thresholds under moderate revenue downside scenarios.
+
+4) Segment performance
+Core Components
+- Revenue up due to demand from industrial automation customers and improved on-time delivery.
+- Margin improved from better yield and reduced expedite fees.
+
+Field Services
+- Revenue stable; utilization improved in the last month of the quarter.
+- Margin slightly down due to travel costs and training investment for new hires.
+
+Software & Monitoring
+- Revenue grew with enterprise renewals and a small increase in average price per user.
+- Gross margin remained high (software-hosting costs stable), but sales onboarding costs increased opex.
+
+5) Key operational metrics (selected)
+- On-time delivery: 93% (up from 88% in Q2).
+- First-pass yield: 97.1% (up from 96.2% in Q2).
+- Customer churn (software): 1.9% quarterly (down from 2.3%).
+- Safety: 0 lost-time incidents (flat QoQ).
+
+6) Risks and uncertainties
+- Supply chain: Lead times for two semiconductors remain volatile; dual-sourcing efforts are ongoing.
+- Pricing: Competitive pressure may limit further price increases in selected bids.
+- Execution: Atlas ramp depends on supplier qualification and operator training timelines.
+- FX: A stronger EUR vs USD could pressure revenue on USD-denominated contracts.
+
+7) Outlook (management view, non-GAAP narrative)
+For Q4 FY2025, management expects:
+- Revenue in the range of €50m–€53m, reflecting seasonality and backlog conversion.
+- Gross margin broadly stable to slightly up, depending on freight and supplier pricing.
+- Continued investment in R&D and selective commercial hiring.
+- Focus on working capital discipline to support free cash flow generation.
+
+Appendix A) Definitions (non-exhaustive)
+- Gross margin: gross profit as a percentage of revenue.
+- Operating income (EBIT): profit after operating expenses, before interest and taxes.
+- Adjusted EBITDA: EBITDA adjusted for non-recurring items (none recorded in Q3 FY2025).
