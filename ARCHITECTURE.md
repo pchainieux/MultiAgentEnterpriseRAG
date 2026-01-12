@@ -110,88 +110,124 @@ At runtime, the user interacts through either the static `ui.html` or any HTTP c
 ## 3. Core Components
 
 ### 3.1. Frontend
+
 Name: Demo UI (ui.html).
+
 Description: A minimal single page UI that can ingest documents by container local paths (POST /ingest) and chat (POST /chat) while storing sessionId in localStorage and rendering returned citations.
+
 Technologies: Plain HTML/CSS/JavaScript, served by FastAPI’s / route. 
+
 Deployment: Packaged into the same Docker image as the API service and served from the container filesystem. 
 
 ### 3.2. Backend Services
 #### 3.2.1. Multi-Agent RAG API (FastAPI)
+
 Name: MultiAgent RAG API. 
+
 Description: Exposes:
 - POST /ingest: indexes documents from local file paths (developer/admin endpoint).
 - POST /chat: converts client messages into LangChain messages, constructs initial GraphState, and invokes the LangGraph multi-agent workflow
+
 Technologies: FastAPI + Uvicorn, Pydantic settings, structlog logging. 
+
 Deployment: Docker container (Dockerfile) and local multi-service composition (docker-compose.yaml).
 
 #### 3.2.2. Agent Orchestration (LangGraph)
+
 Name: LangGraph workflow. 
+
 Description: Orchestrates multiple specialised nodes operating over a shared GraphState contract.
+
 Implements a retry loop for weak retrieval and branches for direct-answer and clarification paths.
+
 Technologies: langgraph (StateGraph), LangChain message/document types. 
+
 Deployment: Runs in-process inside the FastAPI container.
 
 #### 3.2.3. RAG Core Library (src/rag)
+
 Name: RAG primitives. 
+
 Description:
 - Retrieval: HybridRetriever performs dense vector search + lexical search in Qdrant, merges and reranks results.
 - Reranking: simple_rerank provides deterministic, zero-external-call ranking as a placeholder. 
 - LLM + embeddings: provider routing (OpenAI vs Ollama) and BGE embeddings factory. 
 - Prompts: centralized system prompts for planner, reasoning, citations, and direct-answer.
+
 Technologies: Qdrant client, Redis client, SentenceTransformers, OpenAI SDK, requests (Ollama adapter).
+
 Deployment: Runs in-process inside the FastAPI container; Qdrant/Redis are external containers in compose.
 
 ## 4. Data Stores
 
 ### 4.1. Vector Store (Qdrant)
+
 Name: Qdrant collection.
+
 Type: Vector database.
+
 Purpose: Stores embedded document chunks and associated payload metadata used for dense and lexical retrieval during chat.
+
 Key Schemas/Collections: documents (default), with vector size 1024 by default and cosine distance. 
 
 ### 4.2. Conversation Memory Store (Redis)
+
 Name: Redis chat memory store. 
+
 Type: Cache memory. 
+
 Purpose: Persists per-session conversation “recent messages” and a rolling summary with TTL, enabling multi-turn context across requests.
 
 ## 5. External Integrations / APIs
+
 Serivce Name: LLM Provider (OpenAI or Ollama). 
+
 Purpose: Powers query planning, reasoning synthesis, and citation post-processing.
+
 Integration Method:
 - OpenAI: SDK (openai client) via a minimal LangChain compatible wrapper.
 - Ollama-like backend: HTTP POST {base_url}/generate using requests. 
 
 ## 6. Deployment & Infrastructure
+
 Cloud Provider: None, local first Docker Compose is provided. 
+
 Key Services Used (local/dev):
 - Docker container for FastAPI (Dockerfile). 
 - Qdrant container for vector storage. 
 - Redis container for memory persistence. 
+
 CI/CD Pipeline: Not implemented.
+
 Monitoring & Logging: Application logs are structured JSON via structlog
 
 ## 7. Security Considerations
+
 Authentication: Not implemented
+
 Authorization: Not implemented
+
 Data Encryption: Not implemented
+
 Key Security Tools/Practices (recommended next steps):
 - Add auth middleware / dependency in src/app/api/deps.py and apply it to /ingest and optionally /chat.
 - Sanitise and validate ingestion paths
 
 ## 8. Development & Testing Environment
+
 Local Setup Instructions: Run `docker compose up --build` to start app, qdrant, and redis, then open `http://localhost:8000/` for the demo UI.
+
 Testing Frameworks: Pytest and pytest-asyncio are included in dependencies. 
+
 Code Quality Tools: Not implemented. 
 
-## 9. Future Considerations / Roadmap
-Replace simple_rerank with a cross-encoder reranker or LLM-based reranking to improve retrieval precision under ambiguity. 
-Implement real refusal handling (currently refuse routes to the clarify node as a placeholder) and add policy/guardrails in the supervisor.
-Add authentication/authorisation, especially for ingestion, and switch from “ingest by path” to secure file upload. 
-Add observability: request IDs, structured tracing across graph nodes, and optional metrics (latency, token usage). 
+## 9. Project Identification
 
-## 10. Project Identification
-Project Name: Multi-Agent Entreprise RAG
-Repository URL: [https://github.com/pchainieux/MultiAgentEntrepriseRAG]
+Project Name: Multi-Agent Enterprise RAG
+
+Repository URL: [https://github.com/pchainieux/MultiAgentEnterpriseRAG]
+
 Primary Contact/Team: Paul Chainieux
+
 Date of Last Update: [2026-01-10]
 

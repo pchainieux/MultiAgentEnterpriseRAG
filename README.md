@@ -1,4 +1,4 @@
-# MultiAgentEntrepriseRAG
+# MultiAgentEnterpriseRAG
 
 Multi-agent RAG demo for interacting with company information: ingest local documents into Qdrant, then chat via a LangGraph-orchestrated workflow that retrieves, reasons, and returns structured citations, with multi-turn memory in Redis.
 
